@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -27,6 +30,10 @@
         "psr-4": {
             "App\\": "app/",
             "Medine\\Apps\\ChallengeOne\\Backend\\": "apps/challenge_one/backend/src",
+            "Medine\\Apps\\ChallengeThree\\Backend\\": "apps/challenge_three/backend/src",
+            "Medine\\": [
+                "src"
+            ],
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }

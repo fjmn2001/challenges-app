@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalController;
+use Medine\Apps\ChallengeOne\Backend\Controller\InvoicesIdGetController;
+use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalGetController;
+use Medine\Apps\ChallengeOne\Backend\Controller\ProductsNameGetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/invoices/{id}/total', InvoiceTotalController::class);
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('invoices/id', InvoicesIdGetController::class);
+Route::get('/invoices/{id}/total', InvoiceTotalGetController::class);
+Route::get('products/name', ProductsNameGetController::class);
