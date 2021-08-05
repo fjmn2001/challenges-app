@@ -30,7 +30,7 @@ Conozca los desafíos en este doc :point_right: [We are challenges](https://docs
 ### :star2: Herramientas utilizadas
 
  1. [Instalar Docker](https://www.docker.com/get-started) :whale:
- 2. :cyclone:Clonar este proyecto: `git cloneub.com/fjmn2001/challenges-app.git`
+ 2. :cyclone:Clonar este proyecto: `git clone https://github.com/fjmn2001/challenges-app.git`
 
 ### :hammer_and_wrench: Configuración del entorno
 
@@ -46,7 +46,7 @@ Conozca los desafíos en este doc :point_right: [We are challenges](https://docs
 ## :earth_americas: Mapas de la aplicación
 ### :file_folder: Directorio «apps»
 ```scala
-$ tree -L 4 src
+$ tree -L 4 apps
 apps  
 ├── challenge_five // Desafio 5: Construcción de un CRUD con Bootstrap y plantillas Blade  
 │ └── backend  
@@ -67,6 +67,21 @@ apps
 ```
 
 ### :file_folder: Directorio «src»
+
+```scala
+$ tree -L 4 src
+src // Directorio que recibe los datos desde los controladores del directorio apps  
+├── ChallengeFive  
+│ └── Tasks  
+│ └── Application  
+│ └── Create //Directorio donde se persisten los datos  
+└── Shared  
+└── Application  
+└── Find  
+├── InvoiceDoesNotExists.php  
+├── InvoiceFinder.php //Consulta de lectura  
+└── InvoiceFinderRequest.php
+```
  
  ## :nerd_face: Explicación del proyecto
  
