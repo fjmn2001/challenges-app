@@ -1,0 +1,12 @@
+# Add a product
+POST localhost/api/products
+Content-Type: application/json
+
+{
+    "invoice_id": "1",
+    "name": "Laptop",
+    "quantity": 2,
+    "price": 421.99
+}
+
+###

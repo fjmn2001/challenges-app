@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalGetController;
 use Medine\Apps\ChallengeOne\Backend\Controller\InvoicesIdGetController;
+use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalGetController;
 use Medine\Apps\ChallengeOne\Backend\Controller\ProductsNameGetController;
 
 /*
