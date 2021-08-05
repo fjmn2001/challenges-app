@@ -1,5 +1,5 @@
 
-# ¿Qqué es "Laravel Jetstream"? :thinking:
+# ¿Qué es "Laravel Jetstream"? :thinking:
 
 :zap: [Laravel Jetstream](https://jetstream.laravel.com/2.x/introduction.html) es una herramienta que ha sido diseñada de manera especial para uno de los framework mas reconocidos de php, como lo es laravel. Este scaffolding ha sido creado con la finalidad de hacer posible de manera sencilla la implementacion para registos, verificacion de correos electronicos, inicios y administracion de sesion; ademas permite la creacion de API por medio de laravel Sanctum y provee otras opciones para administracion de equipo.
 
