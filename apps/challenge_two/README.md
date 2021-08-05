@@ -15,4 +15,4 @@ Es una *interfaz de línea de comandos* (**CLI**) para trabajar con entornos de 
 
 Ofrece imágenes de Docker **ya preparadas** para las aplicaciones Laravel, con el servidor web, compatibilidad con PHP, MySQL o MariaDB, Redis y otros programas dentro del stack típico de Laravel.
 
-Sail es ideal para quienes tienen poca o nada de experiencia con Docker, dado que puede utilizarse sin siquiera saber cómo funciona este último.
+Sail es ideal para quienes tienen poca o nada de experiencia con Docker, dado que puede utilizarse sin siquiera saber cómo funciona este último :astonished:.
