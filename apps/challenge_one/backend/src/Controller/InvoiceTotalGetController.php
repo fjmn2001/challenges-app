@@ -8,7 +8,7 @@ use App\Models\Invoice;
 use Illuminate\Http\Response;
 use InvalidArgumentException;
 
-final class InvoiceTotalController
+final class InvoiceTotalGetController
 {
     public function __invoke(string $invoiceId): Response
     {

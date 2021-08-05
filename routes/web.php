@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalController;
-use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceProductsGreaterThan100Controller;
-use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceProductsNameController;
+use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalGetController;
+use Medine\Apps\ChallengeOne\Backend\Controller\InvoicesIdGetController;
+use Medine\Apps\ChallengeOne\Backend\Controller\ProductsNameGetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/invoices/{id}/total', InvoiceTotalController::class);
 
-Route::get('invoices', InvoiceProductsGreaterThan100Controller::class);
-
-Route::get('invoices_products', InvoiceProductsNameController::class);
+Route::get('invoices/id', InvoicesIdGetController::class);
+Route::get('/invoices/{id}/total', InvoiceTotalGetController::class);
+Route::get('products/name', ProductsNameGetController::class);
