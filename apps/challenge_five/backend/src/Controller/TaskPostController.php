@@ -18,7 +18,7 @@ final class TaskPostController
         $this->creator = $creator;
     }
 
-    public function __invoke(Request $request): Response
+    public function __invoke(Request $request)
     {
         ($this->creator)(new TaskCreatorRequest(
             (string)$request->request->get('description'),
@@ -26,6 +26,6 @@ final class TaskPostController
             (string)Auth()->id(),
         ));
 
-        return new Response('', Response::HTTP_CREATED);
+        return redirect('/home');
     }
 }
