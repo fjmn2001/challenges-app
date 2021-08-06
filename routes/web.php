@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Medine\Apps\ChallengeFive\Backend\Controller\LogPostController;
 use Medine\Apps\ChallengeFive\Backend\Controller\TaskPostController;
 use Medine\Apps\ChallengeOne\Backend\Controller\InvoicesIdGetController;
 use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalGetController;
@@ -31,3 +32,4 @@ Route::get('products/name', ProductsNameGetController::class);
 
 //tasks
 Route::post('tasks', TaskPostController::class);
+Route::post('tasks/{id}/logs', LogPostController::class);

@@ -19,4 +19,9 @@ final class Task extends Model
         'due_date' => 'datetime',
         'user_id' => 'string'
     ];
+
+    public function logs()
+    {
+        return $this->hasMany(Log::class);
+    }
 }
