@@ -7,18 +7,18 @@ namespace Medine\ChallengeFive\Tasks\Application\Create;
 final class TaskCreatorRequest
 {
     private $description;
-    private $userId;
     private $dueDate;
+    private $userId;
 
     public function __construct(
         string $description,
-        string $userId,
-        string $dueDate
+        string $dueDate,
+        string $userId
     )
     {
         $this->description = $description;
-        $this->userId = $userId;
         $this->dueDate = $dueDate;
+        $this->userId = $userId;
     }
 
     public function description(): string
@@ -26,13 +26,13 @@ final class TaskCreatorRequest
         return $this->description;
     }
 
-    public function userId(): string
-    {
-        return $this->userId;
-    }
-
     public function dueDate(): string
     {
         return $this->dueDate;
+    }
+
+    public function userId(): string
+    {
+        return $this->userId;
     }
 }

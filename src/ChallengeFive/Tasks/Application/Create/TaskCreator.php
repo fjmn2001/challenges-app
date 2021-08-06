@@ -4,14 +4,18 @@ declare(strict_types=1);
 
 namespace Medine\ChallengeFive\Tasks\Application\Create;
 
+use App\Models\Task;
+
 final class TaskCreator
 {
     public function __invoke(TaskCreatorRequest $request)
     {
-        $task = Task(
-            $request->description(),
-            $request->dueDate(),
-            $request->userId()
-        );
+        $task = new Task([
+            'description' => $request->description(),
+            'due_date' => $request->dueDate(),
+            'user_id' => $request->userId()
+        ]);
+
+        $task->save();
     }
 }
