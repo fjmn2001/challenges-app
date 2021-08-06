@@ -1,63 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## We are challenges!
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplicación de PHP :elephant:  desarrollada con el framework **Laravel** para cumplir con una serie de desafíos propuestos :muscle:
 
-## About Laravel
+Conozca los desafíos en este doc :point_right: [We are challenges](https://docs.google.com/document/d/1rs1Mwhccrjs7JtRVCarixbMLqhDYYd1W5RpIHl4Z4Jc/edit?usp=sharing)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tabla de contenido
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ - [:star:Entorno de configuración](#star-entorno-de-configuracion)
+	 - [:star2:Herramientas utilizadas](#star2-herramientas-utilizadas)
+	 - [:hammer_and_wrench:Configuración del entorno](#hammer_and_wrench-configuración-del-entorno)
+	 - [:globe_with_meridians:Ejecución de la aplicación](#globe_with_meridians-ejecución-de-la-aplicación)
+	 - [:heavy_check_mark: Ejecución de las pruebas](#heavy_check_mark-ejecución-de-las-pruebas)
+	
+	
+ - [:earth_americas: Mapas de la aplicación](#earth_americas-mapas-de-la-aplicación)
+	 - [:file_folder:Directorio «**apps**»](#file_folder-directorio-«apps»)
+	 - [:file_folder:Directorio «**src**»](#file_folder-directorio-«src»)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ 
+ - [:nerd_face:Explicación del proyecto](#nerd_face-explicación-del-proyecto)
+	 -  [Desafio :one: Desarrollo de consultas de lecturas](#desafío-one-desarrollo-de-consultas-de-lecturas)
+	 -  [Desafio :two: Descripción paso a paso para instalar un proyecto básico de Laravel](#desafío-two-descripción-paso-a-paso-para-instalar-un-proyecto-básico-de-laravel)
+	 -  [Desafio :three: Creación y uso de «**Observers**»](#desafío-three-creación-y-uso-de-«observers»)
+	 -  [Desafio :four: Conociendo la herramienta Laravel Jetstream y la utilidad de Liveware para los desarrolladores ](#desafío-four-conociendo-la-herramienta-«laravel-jestream»-y-la-utilidad-de-«liveware»-para-los-desarrolladores)
+	 - [Desafío :five: Construcción de un CRUD, utilizando Bootstrap y plantillas de Layout «Blade» para el frontend](#desafío-five-construcción-de-un-crud-utilizando-«bootstrap»-y-plantillas-de-layout-«blade»-para-el-frontend)
+ 
+## :star: Entorno de configuracion
 
-## Learning Laravel
+### :star2: Herramientas utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+ 1. [Instalar Docker](https://www.docker.com/get-started) :whale:
+ 2. :cyclone:Clonar este proyecto: `git clone https://github.com/fjmn2001/challenges-app.git`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### :hammer_and_wrench: Configuración del entorno
 
-## Laravel Sponsors
+ - Crear un archivo de entorno local si es necesario:  `cp .env .env.example`:page_facing_up:
+ 
+### :globe_with_meridians: Ejecución de la aplicación
+ - Instale las dependencias de PHP y abra los contenedores de Docker del proyecto con **Docker compose**: `make deps`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### :heavy_check_mark: Ejecución de las pruebas
 
-### Premium Partners
+ - Instale las dependencias PHP si no lo ha hecho: `make test`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
+## :earth_americas: Mapas de la aplicación
+### :file_folder: Directorio «apps»
+```scala
+$ tree -L 4 apps
+apps  
+├── challenge_five // Desafio 5: Construcción de un CRUD con Bootstrap y plantillas Blade  
+│ └── backend  
+│ └── src  
+│ └── Controller  
+├── challenge_four // Desafio 4: Explicación de Laravel Jetstream y Livewire  
+│ └── README.md  
+├── challenge_one // Desafio 1: Generación de consultas a través de Eloquent  
+│ └── backend  
+│ └── src  
+│ └── Controller  
+├── challenge_three // Desafio 3: Creación y uso de Observers  
+│ └── backend  
+│ └── src  
+│ └── Controller  
+└── challenge_two // Desafio 2: Instrucciones para instalar un proyecto básico de Laravel  
+└── README.md
+```
 
-## Contributing
+### :file_folder: Directorio «src»
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```scala
+$ tree -L 4 src
+src // Directorio que recibe los datos desde los controladores del directorio apps  
+├── ChallengeFive  
+│ └── Tasks  
+│ └── Application  
+│ └── Create //Directorio donde se persisten los datos  
+└── Shared  
+└── Application  
+└── Find  
+├── InvoiceDoesNotExists.php  
+├── InvoiceFinder.php //Consulta de lectura  
+└── InvoiceFinderRequest.php
+```
+ 
+ ## :nerd_face: Explicación del proyecto
+ 
 
-## Code of Conduct
+### Desafío :one: Desarrollo de consultas de lecturas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+En el primer desafío de este proyecto, se procedió a desarrollar las consultas de lecturas necesarias para obtener la información proveniente de la base de datos; esto se logro mediante el uso del [ORM](https://es.wikipedia.org/wiki/Asignaci%C3%B3n_objeto-relacional) de Laravel, [Eloquent](https://laravel.com/docs/8.x/eloquent).
 
-## Security Vulnerabilities
+### Desafío :two: Descripción paso a paso para instalar un proyecto básico de Laravel
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Para dar continuidad, se procedió a realizar el 2° desafío; el cual busca explicar de manera detallada los pasos a seguir para crear un proyecto de forma correcta en Laravel.
 
-## License
+### Desafío :three: Creación y uso de «Observers»
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Como 3° desafío, se añadió un nuevo campo a la tabla “Invoice”, en este punto también se hace uso de una nueva funcionalidad conocida como observer; esto con el fin de obtener el valor total de la tabla “invoice” (desafio 1) cada vez que se inserte un registro en la tabla "Product".
+
+### Desafío :four: Conociendo la herramienta «Laravel Jestream» y la utilidad de «Liveware» para los desarrolladores
+
+«Laravel Jetstream» es una herramienta anexada a Laravel con la finalidad de brindar implementación para registros, verificación de correos electrónicos y más.
+
+Además, se entendió que Livewire es un stack para el frontend que logra que el programador pueda realizar tareas de manera menos compleja.
+
+### Desafío :five: Construcción de un CRUD, utilizando «Bootstrap» y plantillas de layout «Blade» para el frontend
+  
+Para finalizar este ciclo de desafíos, continuamos con el número 5; el cual consistía en realizar un CRUD utilizando Bootstrap y plantillas de layout «Blade» para el frontend.
