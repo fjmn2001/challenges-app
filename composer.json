@@ -16,6 +16,7 @@
         "laravel/jetstream": "^2.3",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.3",
         "livewire/livewire": "^2.5"
     },
     "require-dev": {
@@ -31,6 +32,7 @@
             "App\\": "app/",
             "Medine\\Apps\\ChallengeOne\\Backend\\": "apps/challenge_one/backend/src",
             "Medine\\Apps\\ChallengeThree\\Backend\\": "apps/challenge_three/backend/src",
+            "Medine\\Apps\\ChallengeFive\\Backend\\": "apps/challenge_five/backend/src",
             "Medine\\": [
                 "src"
             ],
