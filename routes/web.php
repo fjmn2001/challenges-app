@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Medine\Apps\ChallengeOne\Backend\Controller\InvoicesIdGetController;
 use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalGetController;
@@ -20,9 +21,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('invoices/id', InvoicesIdGetController::class);
 Route::get('/invoices/{id}/total', InvoiceTotalGetController::class);
