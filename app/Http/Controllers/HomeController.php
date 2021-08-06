@@ -25,4 +25,22 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function show($id)
+    {
+        return view('task',[
+            'id' => $id
+        ]);
+    }
+
+    public function create()
+    {
+        return view('new_task');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->all());
+        return view('new_task');
+    }
 }

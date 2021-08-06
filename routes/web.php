@@ -18,12 +18,15 @@ use Medine\Apps\ChallengeOne\Backend\Controller\ProductsNameGetController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/task/{id}', [App\Http\Controllers\HomeController::class, 'show'])->name('task');
+Route::get('/task', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
+Route::post('/task', [App\Http\Controllers\HomeController::class, 'store'])->name('store');
 
 Route::get('invoices/id', InvoicesIdGetController::class);
 Route::get('/invoices/{id}/total', InvoiceTotalGetController::class);
