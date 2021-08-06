@@ -32,6 +32,7 @@
             "App\\": "app/",
             "Medine\\Apps\\ChallengeOne\\Backend\\": "apps/challenge_one/backend/src",
             "Medine\\Apps\\ChallengeThree\\Backend\\": "apps/challenge_three/backend/src",
+            "Medine\\Apps\\ChallengeFive\\Backend\\": "apps/challenge_five/backend/src",
             "Medine\\": [
                 "src"
             ],

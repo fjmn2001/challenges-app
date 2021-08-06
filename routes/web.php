@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Medine\Apps\ChallengeFive\Backend\Controller\LogPostController;
+use Medine\Apps\ChallengeFive\Backend\Controller\TaskPostController;
 use Medine\Apps\ChallengeOne\Backend\Controller\InvoicesIdGetController;
 use Medine\Apps\ChallengeOne\Backend\Controller\InvoiceTotalGetController;
 use Medine\Apps\ChallengeOne\Backend\Controller\ProductsNameGetController;
@@ -31,3 +33,7 @@ Route::post('/task', [App\Http\Controllers\HomeController::class, 'store'])->nam
 Route::get('invoices/id', InvoicesIdGetController::class);
 Route::get('/invoices/{id}/total', InvoiceTotalGetController::class);
 Route::get('products/name', ProductsNameGetController::class);
+
+//tasks
+Route::post('tasks', TaskPostController::class);
+Route::post('tasks/{id}/logs', LogPostController::class);

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Log extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'comment'
+    ];
+    protected $casts = [
+        'comment' => 'string'
+    ];
 }
