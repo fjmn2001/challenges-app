@@ -21,7 +21,7 @@ final class TasksSearcher
                 'due_date' => $task->due_date->format('d/m/Y'),
                 'user_name' => $task->usuario->name,
                 'user_validate' => $task->user_id == Auth::user()->id ? 'si' : 'no',
-                'due_date_validate' => $task->due_date < Carbon::now() ? 'si' : 'no',
+                'due_date_validate' => $task->due_date < Carbon::now() ? 'table-danger' : '',
             ];
         })->toArray();
     }

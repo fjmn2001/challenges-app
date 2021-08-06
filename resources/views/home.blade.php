@@ -21,7 +21,7 @@
                             </thead>
                             <tbody>
                             <?php foreach ($tasks as $task) {?>
-                            <tr>
+                            <tr class="{{$task['due_date_validate']}}">
                                 <td>{{$task['description']}}</td>
                                 <td>{{$task['due_date']}}</td>
                                 <td>{{$task['user_name']}}</td>
