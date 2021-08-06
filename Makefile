@@ -1,6 +1,6 @@
 current-dir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-up:
+start:
 	./vendor/bin/sail up -d
 
 deps: composer-install
@@ -23,10 +23,5 @@ composer composer-install composer-update composer-require composer-require-modu
                 laravelsail/php80-composer:latest \
                 composer install --ignore-platform-reqs --no-ansi
 
-reload: composer-env-file
-	@docker-compose exec php-fpm kill -USR2 1
-	@docker-compose exec nginx nginx -s reload
-
-test:
-	echo $(pwd)
-
+test: composer-env-file
+	@vendor/bin/sail test
