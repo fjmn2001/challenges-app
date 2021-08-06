@@ -12,16 +12,17 @@ composer-env-file:
 composer-install: CMD=install
 composer-update: CMD=update
 composer-require: CMD=require
+composer-dump: CMD=dump-autoload
 composer-require: INTERACTIVE=-ti --interactive
 composer-require-module: CMD=require $(module)
 composer-require-module: INTERACTIVE=-ti --interactive
-composer composer-install composer-update composer-require composer-require-module: composer-env-file
+composer composer-install composer-update composer-require composer-dump composer-require-module: composer-env-file
 	@docker run --rm \
                 --user $(id -u):$(id -g) \
                 --volume $(current-dir):/opt \
                 -w /opt \
                 laravelsail/php80-composer:latest \
-                composer install --ignore-platform-reqs --no-ansi
+                composer $(CMD) --ignore-platform-reqs --no-ansi
 
 test: composer-env-file
 	@vendor/bin/sail test
