@@ -14,17 +14,17 @@
                             <div class="col-sm-7">
                                 <div class="form-group">
                                     <label for="description">Descripcion</label>
-                                    <input type="text" class="form-control" id="description" name="description" value="{{$task->description}}"
+                                    <input type="text" class="form-control" id="description" name="description" value="{{$task['description']}}"
                                            aria-describedby="emailHelp" placeholder="Descripcion" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label for="due_date">Fecha maxima de ejecucion</label>
-                                    <input type="text" class="form-control" id="due_date" name="due_date" value="{{$task->due_date->format('d/m/Y')}}" readonly>
+                                    <input type="text" class="form-control" id="due_date" name="due_date" value="{{$task['due_date']}}" readonly>
                                 </div>
                                 <br/>
                                 <hr/>
                                 <div>
-                                    <form method="post" action="{{ url("/tasks/{$task->id}/logs") }}">
+                                    <form method="post" action="{{ url("/tasks/{$task['id']}/logs") }}">
                                         @csrf
                                         <div class="form-group">
                                             <label for="description">Comentario</label>
@@ -39,19 +39,17 @@
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Firstname</th>
-                                        <th>Lastname</th>
+                                        <th>Comentario</th>
+                                        <th>Fecha de creacion</th>
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <?php foreach ($logs as $log) {?>
                                     <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
+                                        <td>{{$log['comment']}}</td>
+                                        <td>{{$log['created_at']}}</td>
                                     </tr>
-                                    <tr>
-                                        <td>Mary</td>
-                                        <td>Moe</td>
-                                    </tr>
+                                    <?php }?>
                                     </tbody>
                                 </table>
                             </div>
