@@ -24,7 +24,7 @@ final class SomeTaskTest extends TestCase
             'dueDate' => $faker->date()
         ]);
 
-        $response->assertStatus(201);
+        $response->assertStatus(302);
     }
 
     public function test_tasks_can_be_created_and_received_logs()
@@ -37,7 +37,7 @@ final class SomeTaskTest extends TestCase
             'dueDate' => $faker->date()
         ]);
 
-        $taskResponse->assertStatus(201);
+        $taskResponse->assertStatus(302);
 
         $lastTaskCreated = Task::orderBy('id', 'desc')->take(1)->get()->first();
 
@@ -45,6 +45,6 @@ final class SomeTaskTest extends TestCase
             'comment' => $faker->text(25)
         ]);
 
-        $logResponse->assertStatus(201);
+        $logResponse->assertStatus(302);
     }
 }
