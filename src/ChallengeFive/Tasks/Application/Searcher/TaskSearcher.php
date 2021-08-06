@@ -24,6 +24,7 @@ final class TaskSearcher
             'id' => $task->id,
             'description' => $task->description,
             'due_date' => $task->due_date->format('d/m/Y'),
+            'user_id' => $task->user_id,
         ];
     }
 }
