@@ -21,12 +21,16 @@
                             </thead>
                             <tbody>
                             <?php foreach ($tasks as $task) {?>
-                            <tr>
-                                <td>{{$task->description}}</td>
-                                <td>{{$task->due_date->format('d/m/Y')}}</td>
-                                <td>{{$task->usuario->name}}</td>
+                            <tr class="{{$task['due_date_validate']}}">
+                                <td>{{$task['description']}}</td>
+                                <td>{{$task['due_date']}}</td>
+                                <td>{{$task['user_name']}}</td>
                                 <td>
-                                    <a href="{{ url("/tasks/{$task->id}") }}" class="btn btn-primary btn-sm btn-block">Ver tarea</a>
+                                    <?php if($task['user_validate'] == 'si'){?>
+                                    <a href="{{ url("/tasks/{$task['id']}") }}" class="btn btn-primary btn-sm btn-block">Ver tarea</a>
+                                    <?php } else if ($task['user_validate'] == 'no'){ ?>
+                                    <button type="button" class="btn btn-primary btn-sm btn-block" disabled="">Ver tarea</button>
+                                    <?php } ?>
                                 </td>
                             </tr>
                             <?php }?>

@@ -32,6 +32,9 @@ final class TaskGetController extends Controller
             (int) Auth::user()->id
         ));
 
+        if($task['user_id'] != Auth::user()->id)
+            return redirect('/home');
+
         $logs = ($this->logsSearchers)(new TaskSearcherRequest(
             (int) $id,
             (int) Auth::user()->id
