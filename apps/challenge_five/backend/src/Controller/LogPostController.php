@@ -18,13 +18,13 @@ final class LogPostController
         $this->creator = $creator;
     }
 
-    public function __invoke(string $taskId, Request $request): Response
+    public function __invoke(string $taskId, Request $request)
     {
         ($this->creator)(new LogCreatorRequest(
             $taskId,
             (string)$request->request->get('comment')
         ));
 
-        return new Response('', Response::HTTP_CREATED);
+        return redirect("/tasks/{$taskId}");
     }
 }

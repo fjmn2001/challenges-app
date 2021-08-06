@@ -26,14 +26,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/task/{id}', [App\Http\Controllers\HomeController::class, 'show'])->name('task');
-Route::get('/task', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
-Route::post('/task', [App\Http\Controllers\HomeController::class, 'store'])->name('store');
+Route::get('/tasks/{id}', [App\Http\Controllers\HomeController::class, 'show'])->name('task');
+Route::get('/tasks', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
 
 Route::get('invoices/id', InvoicesIdGetController::class);
 Route::get('/invoices/{id}/total', InvoiceTotalGetController::class);
 Route::get('products/name', ProductsNameGetController::class);
 
 //tasks
-Route::post('tasks', TaskPostController::class);
-Route::post('tasks/{id}/logs', LogPostController::class);
+Route::post('tasks', TaskPostController::class)->name('store');
+Route::post('tasks/{id}/logs', LogPostController::class)->name('storeLogs');

@@ -7,46 +7,29 @@
                 <div class="card">
                     <div class="card-header">
                         <p>Tareas</p>
-                        <a href="{{ url("/task") }}" class="btn btn-primary btn-sm">Crear nueva tarea</a>
+                        <a href="{{ route('create') }}" class="btn btn-primary btn-sm">Crear nueva tarea</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-hover">
                             <thead>
                             <tr>
-                                <th width="40%" class="text-center">Descripcion</th>
-                                <th width="20%" class="text-center">Fecha</th>
-                                <th width="20%" class="text-center">Usuario</th>
+                                <th width="40%">Descripcion</th>
+                                <th width="20%">Fecha</th>
+                                <th width="20%">Usuario</th>
                                 <th width="20%" class="text-center">Opciones</th>
                             </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($tasks as $task) {?>
                             <tr>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td></td>
+                                <td>{{$task->description}}</td>
+                                <td>{{$task->due_date->format('d/m/Y')}}</td>
+                                <td>{{$task->usuario->name}}</td>
                                 <td>
-                                    <a href="{{ url("/task/1") }}" class="btn btn-primary btn-sm btn-block">Ver
-                                        tarea</a>
+                                    <a href="{{ url("/tasks/{$task->id}") }}" class="btn btn-primary btn-sm btn-block">Ver tarea</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Mary</td>
-                                <td>Moe</td>
-                                <td></td>
-                                <td>
-                                    <a href="{{ url("/task/2") }}" class="btn btn-primary btn-sm btn-block">Ver
-                                        tarea</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>July</td>
-                                <td>Dooley</td>
-                                <td></td>
-                                <td>
-                                    <a href="{{ url("/task/3") }}" class="btn btn-primary btn-sm btn-block">Ver
-                                        tarea</a>
-                                </td>
-                            </tr>
+                            <?php }?>
                             </tbody>
                         </table>
                     </div>

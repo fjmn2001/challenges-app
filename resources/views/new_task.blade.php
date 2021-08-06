@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <p>Tareas</p>
-                        <a href="{{ url("/home") }}" class="btn btn-primary btn-sm">Regresar</a>
+                        <a href="{{ route("home") }}" class="btn btn-primary btn-sm">Regresar</a>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -21,7 +21,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="due_date">Fecha maxima de ejecucion</label>
-                                        <input type="date" class="form-control" id="due_date" name="due_date" placeholder="Fecha maxima de ejecucion" required>
+                                        <input type="date" class="form-control" id="dueDate" name="dueDate" placeholder="Fecha maxima de ejecucion" required>
                                         <input type="hidden" class="form-control" id="user_id" name="user_id" value="{{ Auth::user()->id }}">
                                     </div>
                                     <button type="submit" class="btn btn-primary">Guardar tarea</button>

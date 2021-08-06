@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Task;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,24 +24,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home',[
+            'tasks' => Task::orderBy('id', 'desc')->get(),
+        ]);
     }
 
     public function show($id)
     {
         return view('task',[
-            'id' => $id
+            'task' => Task::find($id),
         ]);
     }
 
     public function create()
     {
-        return view('new_task');
-    }
-
-    public function store(Request $request)
-    {
-        dd($request->all());
         return view('new_task');
     }
 }

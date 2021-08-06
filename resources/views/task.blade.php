@@ -7,22 +7,32 @@
                 <div class="card">
                     <div class="card-header">
                         <p>Tareas</p>
-                        <a href="{{ url("/home") }}" class="btn btn-primary btn-sm">Regresar</a>
+                        <a href="{{ route("home") }}" class="btn btn-primary btn-sm">Regresar</a>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-7">
                                 <div class="form-group">
                                     <label for="description">Descripcion</label>
-                                    <input type="text" class="form-control" id="description" name="description"
+                                    <input type="text" class="form-control" id="description" name="description" value="{{$task->description}}"
                                            aria-describedby="emailHelp" placeholder="Descripcion" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label for="due_date">Fecha maxima de ejecucion</label>
-                                    <input type="date" class="form-control" id="due_date" name="due_date" readonly>
+                                    <input type="text" class="form-control" id="due_date" name="due_date" value="{{$task->due_date->format('d/m/Y')}}" readonly>
                                 </div>
                                 <br/>
                                 <hr/>
+                                <div>
+                                    <form method="post" action="{{ url("/tasks/{$task->id}/logs") }}">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="description">Comentario</label>
+                                            <input type="text" class="form-control" id="comment" name="comment" aria-describedby="emailHelp" placeholder="Comment" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Guardar logs</button>
+                                    </form>
+                                </div>
                             </div>
                             <div class="col-sm-5">
                                 <h2>Logs</h2>

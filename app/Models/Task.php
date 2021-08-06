@@ -24,4 +24,9 @@ final class Task extends Model
     {
         return $this->hasMany(Log::class);
     }
+
+    public function usuario()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
