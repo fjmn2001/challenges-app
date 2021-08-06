@@ -1,3 +1,4 @@
+
 ## We are challenges!
 
 Aplicación de PHP :elephant:  desarrollada con el framework **Laravel** para cumplir con una serie de desafíos propuestos :muscle:
@@ -6,7 +7,7 @@ Conozca los desafíos en este doc :point_right: [We are challenges](https://docs
 
 ## Tabla de contenido
 
- - [:star:Entorno de configuración](#star-entorno-de-configuracion)
+ - [:star:Entorno de configuración](#star-entorno-de-configuración)
 	 - [:star2:Herramientas utilizadas](#star2-herramientas-utilizadas)
 	 - [:hammer_and_wrench:Configuración del entorno](#hammer_and_wrench-configuración-del-entorno)
 	 - [:globe_with_meridians:Ejecución de la aplicación](#globe_with_meridians-ejecución-de-la-aplicación)
@@ -14,18 +15,18 @@ Conozca los desafíos en este doc :point_right: [We are challenges](https://docs
 	
 	
  - [:earth_americas: Mapas de la aplicación](#earth_americas-mapas-de-la-aplicación)
-	 - [:file_folder:Directorio «**apps**»](#file_folder-directorio-«apps»)
-	 - [:file_folder:Directorio «**src**»](#file_folder-directorio-«src»)
+	 - [:file_folder:Directorio «**apps**»](#file_folder-directorio-apps)
+	 - [:file_folder:Directorio «**src**»](#file_folder-directorio-src)
 
  
  - [:nerd_face:Explicación del proyecto](#nerd_face-explicación-del-proyecto)
 	 -  [Desafio :one: Desarrollo de consultas de lecturas](#desafío-one-desarrollo-de-consultas-de-lecturas)
 	 -  [Desafio :two: Descripción paso a paso para instalar un proyecto básico de Laravel](#desafío-two-descripción-paso-a-paso-para-instalar-un-proyecto-básico-de-laravel)
-	 -  [Desafio :three: Creación y uso de «**Observers**»](#desafío-three-creación-y-uso-de-«observers»)
-	 -  [Desafio :four: Conociendo la herramienta Laravel Jetstream y la utilidad de Liveware para los desarrolladores ](#desafío-four-conociendo-la-herramienta-«laravel-jestream»-y-la-utilidad-de-«liveware»-para-los-desarrolladores)
-	 - [Desafío :five: Construcción de un CRUD, utilizando Bootstrap y plantillas de Layout «Blade» para el frontend](#desafío-five-construcción-de-un-crud-utilizando-«bootstrap»-y-plantillas-de-layout-«blade»-para-el-frontend)
+	 -  [Desafio :three: Creación y uso de «**Observers**»](#desafío-three-creación-y-uso-de-observers)
+	 -  [Desafio :four: Conociendo la herramienta Laravel Jetstream y la utilidad de Liveware para los desarrolladores ](#desafío-four-conociendo-la-herramienta-laravel-jestream-y-la-utilidad-de-liveware-para-los-desarrolladores)
+	 - [Desafío :five: Construcción de un CRUD, utilizando Bootstrap y plantillas de Layout «Blade» para el frontend](#desafío-five-construcción-de-un-crud-utilizando-bootstrap-y-plantillas-de-layout-blade-para-el-frontend)
  
-## :star: Entorno de configuracion
+## :star: Entorno de configuración
 
 ### :star2: Herramientas utilizadas
 
@@ -44,7 +45,7 @@ Conozca los desafíos en este doc :point_right: [We are challenges](https://docs
  - Instale las dependencias PHP si no lo ha hecho: `make test`
 
 ## :earth_americas: Mapas de la aplicación
-### :file_folder: Directorio «apps»
+### :file_folder: Directorio apps
 ```scala
 $ tree -L 4 apps
 apps  
@@ -66,7 +67,7 @@ apps
 └── README.md
 ```
 
-### :file_folder: Directorio «src»
+### :file_folder: Directorio src
 
 ```scala
 $ tree -L 4 src
@@ -94,16 +95,16 @@ En el primer desafío de este proyecto, se procedió a desarrollar las consultas
 
 Para dar continuidad, se procedió a realizar el 2° desafío; el cual busca explicar de manera detallada los pasos a seguir para crear un proyecto de forma correcta en Laravel.
 
-### Desafío :three: Creación y uso de «Observers»
+### Desafío :three: Creación y uso de Observers
 
 Como 3° desafío, se añadió un nuevo campo a la tabla “Invoice”, en este punto también se hace uso de una nueva funcionalidad conocida como observer; esto con el fin de obtener el valor total de la tabla “invoice” (desafio 1) cada vez que se inserte un registro en la tabla "Product".
 
-### Desafío :four: Conociendo la herramienta «Laravel Jestream» y la utilidad de «Liveware» para los desarrolladores
+### Desafío :four: Conociendo la herramienta Laravel Jestream y la utilidad de Liveware para los desarrolladores
 
 «Laravel Jetstream» es una herramienta anexada a Laravel con la finalidad de brindar implementación para registros, verificación de correos electrónicos y más.
 
 Además, se entendió que Livewire es un stack para el frontend que logra que el programador pueda realizar tareas de manera menos compleja.
 
-### Desafío :five: Construcción de un CRUD, utilizando «Bootstrap» y plantillas de layout «Blade» para el frontend
+### Desafío :five: Construcción de un CRUD, utilizando Bootstrap y plantillas de layout Blade para el frontend
   
 Para finalizar este ciclo de desafíos, continuamos con el número 5; el cual consistía en realizar un CRUD utilizando Bootstrap y plantillas de layout «Blade» para el frontend.
